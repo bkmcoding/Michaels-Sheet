@@ -1,36 +1,42 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 const classes = [
   {
-    id: "data-structures",
-    name: "Data Structures",
-    code: "CS 201",
-    description: "Comprehensive notes on algorithms, trees, graphs, and complexity analysis",
+    id: 'data-structures',
+    name: 'Data Structures',
+    code: 'CS 2114',
+    description: 'Comprehensive notes on algorithms, trees, graphs, and complexity analysis',
   },
   {
-    id: "machine-learning",
-    name: "Machine Learning",
-    code: "CS 405",
-    description: "Neural networks, optimization, and model evaluation frameworks",
+    id: 'machine-learning',
+    name: 'Machine Learning',
+    code: 'CS 3203',
+    description: 'Neural networks, optimization, and model evaluation frameworks',
   },
   {
-    id: "linear-algebra",
-    name: "Linear Algebra",
-    code: "MATH 251",
-    description: "Vector spaces, transformations, eigenvalues and matrix operations",
+    id: 'linear-algebra',
+    name: 'Linear Algebra',
+    code: 'MATH 3003',
+    description: 'Vector spaces, transformations, eigenvalues and matrix operations',
   },
   {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    code: "CS 450",
-    description: "Network security, cryptography, penetration testing and threat analysis",
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    code: 'CS 2413',
+    description: 'Network security, cryptography, penetration testing and threat analysis',
   },
   {
-    id: "calc-iii",
-    name: "Calculus III",
-    code: "MATH 253",
-    description: "Multivariable calculus, partial derivatives, and vector calculus",
+    id: 'calc-iii',
+    name: 'Calculus III',
+    code: 'MATH 3404',
+    description: 'Multivariable calculus, partial derivatives, and vector calculus',
+  },
+  {
+    id: 'TBD',
+    name: 'To be Determined',
+    code: 'TEMP 0001',
+    description: "Yeah there would be info right here but this isn't a class.",
   },
 ]
 
@@ -40,7 +46,7 @@ export default function HomePage() {
       {/* Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-8 md:px-12 lg:px-24">
-          <h1 className="text-2xl font-medium tracking-tight text-foreground">Cheatsheets</h1>
+          <h1 className="text-2xl font-medium tracking-tight text-foreground">Michael's Sheets</h1>
         </div>
       </header>
 
@@ -48,11 +54,11 @@ export default function HomePage() {
       <section className="container mx-auto px-6 py-24 md:px-12 md:py-32 lg:px-24 lg:py-40">
         <div className="max-w-4xl">
           <h2 className="text-balance text-5xl font-medium leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl">
-            Your academic resource hub.
+            My online resource hub.
           </h2>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Organized cheatsheets, PDFs, and external resources for all your classes. Everything in one place,
-            accessible anytime.
+            Organized cheatsheets, PDFs, and external resources for some classes. Everything in one place, accessible
+            anytime. Feel free to suggest your own classes.
           </p>
         </div>
       </section>
@@ -89,7 +95,8 @@ export default function HomePage() {
       <footer className="border-t border-border">
         <div className="container mx-auto px-6 py-12 md:px-12 lg:px-24">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Cheatsheets. All materials for educational purposes.
+            © {new Date().getFullYear()} Michael's Sheet. All materials for educational purposes. DM me on discord if
+            you have any questions. @bkmfps
           </p>
         </div>
       </footer>
