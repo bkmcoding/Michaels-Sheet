@@ -1,12 +1,15 @@
 {
-  "name": "my-v0-project",
+  "name": "Michaels-Sheet",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "npm start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
