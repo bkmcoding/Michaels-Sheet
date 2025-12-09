@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { ArrowLeft, ExternalLink, FileText, Upload, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
-// Mock data - In production, this would come from a database
 const classData: Record<
   string,
   {
