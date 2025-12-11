@@ -11,11 +11,9 @@ client = genai.Client()
 def process_massive_presentation(pdf_path):
     print(f"1. Uploading massive file: {pdf_path}...")
     
-    # Upload the PDF using the File API
-    # This stores the file on Google's servers temporarily
+    #stores the file on Google's servers temporarily
     file_ref = client.files.upload(file=pdf_path)
 
-    # Poll for processing completion (Crucial for large files)
     while file_ref.state.name == "PROCESSING":
         print("   Processing on server...")
         time.sleep(5)
@@ -26,7 +24,6 @@ def process_massive_presentation(pdf_path):
 
     print("2. File ready. Sending to Gemini Flash Latest...")
 
-    # The Prompt
     full_prompt = r"""
 [ROLE]
 You are an Elite Academic Professor and Expert LaTeX Typesetter. 
@@ -84,8 +81,7 @@ Your task is to convert the provided lecture slides into a comprehensive, self-c
 Convert the attached image into this high-quality study guide.
 """
 
-    # Generate
-    # We use 1.5 Pro because it has the 2M context window
+    #gemini-latest has 1M context window
     response = client.models.generate_content(
         model='gemini-flash-latest',
         contents=[types.Content(
@@ -102,7 +98,6 @@ Convert the attached image into this high-quality study guide.
         )
     )
 
-    # Save Output
     print("3. Saving output...")
     with open("presentation_converted.tex", "w", encoding="utf-8") as f:
         f.write(response.text)
@@ -110,5 +105,4 @@ Convert the attached image into this high-quality study guide.
     print("Done.")
 
 if __name__ == "__main__":
-    # Ensure you exported your PPTX to PDF first!
     process_massive_presentation("./resultPDF/finalreviewcyber.pdf")

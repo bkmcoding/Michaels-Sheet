@@ -1,4 +1,3 @@
-
 import google.generativeai as genai
 from PIL import Image
 from dotenv import load_dotenv
@@ -10,18 +9,10 @@ genai.configure()
 
 
 def convert_slide_to_latex(image_path):
-    # 1. Setup the Model
-    # We use 'gemma-3-27b-it' which is multimodal (Text + Vision)
     model = genai.GenerativeModel('gemma-3-27b-it')
 
-    # 2. Load the Visual Content
-    # Gemma expects pixel data, so we load the image using PIL
     img = Image.open(image_path)
 
-    # 3. Create the "Merged" Prompt
-    # Since we can't rely on a separate system_instruction field, 
-    # we paste the persona at the top.
-    #      ~ Maybe not needed here
     full_prompt = r"""
     [ROLE]
     You are an advanced LaTeX Code Generator and Academic Tutor. 
@@ -51,16 +42,13 @@ def convert_slide_to_latex(image_path):
 
     print("Sending to Gemma 3 27B...")
 
-    # 4. Generate
-    # We pass the image object directly to the model
+
     try:
         response = model.generate_content([full_prompt, img])
         
-        # 5. Output Handling
         print("\n--- GEMMA 3 OUTPUT ---\n")
         print(response.text)
         
-        # Save to file
         with open("./tex/output.tex", "w") as f:
             f.write(response.text)
 
@@ -69,9 +57,7 @@ def convert_slide_to_latex(image_path):
         print("Tip: Ensure your API key has access to Gemma models in Google AI Studio.")
 
 
-# --- USAGE ---
-# You must convert your PDF page to an image first!
-# e.g., export your slide as 'slide1.jpg'
+# needs to be jpg
 if __name__ == "__main__":
     convert_slide_to_latex("./images/page_1.jpg")
     pass

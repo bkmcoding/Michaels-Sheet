@@ -3,7 +3,6 @@ from google import genai
 
 load_dotenv()
 
-# The client gets the API key from the environment variable `GEMINI_API_KEY`.
 client = genai.Client()
 
 sample_file = genai.upload_file(path="./hw2.pdf", display_name="hw2")

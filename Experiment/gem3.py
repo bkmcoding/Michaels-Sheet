@@ -2,13 +2,11 @@ import os
 import google.generativeai as genai
 from PIL import Image
 
-# Setup
 os.environ["GOOGLE_API_KEY"] = "YOUR_API_KEY"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 def convert_with_gemma_27b(image_path):
-    # CHANGE IS HERE: Use the 27b-it variant
-    # This is the "Instruction Tuned" (it) version which is best for following orders.
+    # need to use -it for it to work
     model = genai.GenerativeModel('gemma-3-12b-it')
     
     img = Image.open(image_path)
