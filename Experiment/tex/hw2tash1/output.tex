@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\section{Asymptotic Order Notation}
+
+Let $f(x)$ and $g(x)$ be functions of a positive $x$.
+
+\subsection{Big O Notation}
+\textbf{Big O notation} describes an upper bound on the growth rate of a function.
+\[ f(x) = O(g(x)) \]
+when there is a positive constant $c$ such that,
+\[ f(x) \le cg(x) \]
+for all $x \ge n$.
+
+\subsection{Big Omega Notation}
+\textbf{Big Omega notation} describes a lower bound on the growth rate of a function.
+\[ f(x) = \Omega(g(x)) \]
+when there exist positive constants $c, n$ such that for all $x \ge n$ we have,
+\[ f(x) \ge cg(x) \]
+
+\subsection{Big Theta Notation}
+\textbf{Big Theta notation} describes a tight bound on the growth rate of a function.
+\[ \Omega(g(x)) = f(g(x)) = O(g(x)) \]
+Then such a tight bound is stated as $f$ is big-$\Theta$ of $g$.
+\[ f(x) = \Theta(g(x)) \]
+
+\section{Question 1: Conditional Work Subroutine}
+
+Consider the following Java subroutine:
+
+\begin{verbatim}
+public static void conditionalWork(int n) {
+    for (int i = 0; i < n; i++) {
+        if (Math.random() < 0.5) {
+            taskA()
+        } else {
+            taskB()
+        }
+    }
+}
+\end{verbatim}
+
+\subsection{Part 1}
+
+If on a certain machine the function \textbf{taskA()} takes 2 seconds on each call in the loop and the function \textbf{taskB()} takes 4 seconds then for $n = 10$, what is the total number of expected seconds taken by the subroutine public static void conditionalWork(int n)?
+
+The total number of expected seconds is 30 seconds.
+\[ a(x) = \frac{x}{2} \]
+\[ b(x) = 4(\frac{x}{2}) \]
+% \[ result(10) = 2 \cdot 5 + 4 \cdot 5 = 30 \text{ seconds} \]
+
+\subsection{Part 2}
+
+The subroutine conditionalWork(int n) is ran on a much faster machine reducing the time taken by \textbf{taskA()} on each call down to $\frac{1}{2}$ of a second and \textbf{taskB()} now takes $\frac{1}{5}$ of a second. For $n = 10$, what is the new total number of seconds expected by the subroutine conditionalWork(int n)?
+
+\[ A = \frac{1}{2} \]
+\[ B = \frac{1}{5} \]
+\[ result(10) = 25 \cdot \frac{1}{2} + 5 \cdot \frac{1}{5} = 5 \]
+% \[ 0.2 + 1 = 1.2 \text{ seconds} \]
+
+\end{document}
