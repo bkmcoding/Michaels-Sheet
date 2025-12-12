@@ -12,3 +12,7 @@ package-lock.json
 
 ./
 next-env.d.ts
+
+./
+Experiment/models
+

@@ -23,8 +23,8 @@
 import os
 import comtypes.client
 
-input_filename = "./examples/finalreviewcyber.pptx"
-output_filename = "../resultPDF/finalreviewcyber.pdf"
+input_filename = "./examples/n50-l3.pptx"
+output_filename = "../pdfs/n50-l3.pdf"
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 input_path = os.path.join(script_dir, input_filename)
