@@ -27,6 +27,8 @@
 
 Whether you need a quick refresh on **Big O notation** or a deep dive into **Vector Calculus**, the resources are organized for quick access.
 
+*Hosted on Azure SWA services & Cloudflare R2 Storage*
+
 <br>
 
 ## Course Catalog
