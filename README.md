@@ -3,7 +3,7 @@
   <h1>Michael's Sheets</h1>
 
   <p>
-    <strong>My online resource hub.</strong>
+    <a href="https://msheet.bkmcoding.com/"><strong>My online resource hub.</strong></a>
   </p>
 
   <p>
@@ -51,6 +51,21 @@ This is essentially a base project just to store some guides and practice sheets
 
 I plan to add the ability to upload coursework/material and it will be automatically
 consolidated, formatted, summarized into a PDF.
+
+<br>
+
+## Feature Preview: Study Guide Generator
+
+Currently in development, this A.I. feature takes raw course content, interprets it,
+and provides Student Study Version of the content.
+
+| **The Input (Source)** | **The Output (Study Guide)** |
+| :--- | :--- |
+| **Raw lecture notes, text, & slides.**<br>Example Midterm Linear Algebra Sheet. | **Detailed and Explained PDF.**<br>Key concepts are explained and expanded upon. |
+| [<img width="541" alt="sharp-readme-example-before" src="https://github.com/user-attachments/assets/c1e6e70d-e50e-437a-bd32-c498a5762ee2" />](https://files.bkmcoding.com/msheets/readme/readme-example-before.pdf) | [<img width="500" height="400" alt="sharp-readme-example-after" src="https://github.com/user-attachments/assets/57effaf2-b882-4401-a24c-ad0a3a687d73" />](https://files.bkmcoding.com/msheets/readme/readme-example-after.pdf) |
+| *Click image to view full Source PDF* | *Click image to view full Guide PDF* |
+
+*Content is converted into a laTeX file and then compiled into a PDF*
 
 If successful I also hope to add the ability to produce practice problems for studying based
 off the material the user has chose.
