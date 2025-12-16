@@ -44,6 +44,13 @@ const classData: Record<
         url: 'https://files.bkmcoding.com/ds-traversal.pdf',
       },
       {
+        id: '3',
+        title: 'Comprehensive Sorts',
+        type: 'pdf',
+        uploadDate: '2025-12-16',
+        url: 'https://files.bkmcoding.com/ds-sorts.pdf',
+      },
+      {
         id: '4',
         title: 'VisuAlgo - Algorithm Visualizations',
         type: 'external',
