@@ -10,6 +10,9 @@ const _geistMono = Geist_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Michael's Sheet",
   description: 'Access organized cheatsheets and resources for all your classes',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

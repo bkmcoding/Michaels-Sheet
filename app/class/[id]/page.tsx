@@ -416,8 +416,8 @@ export default async function ClassPage({ params }: { params: Promise<{ id: stri
 
       {/* Upload Section */}
       <section className="container mx-auto px-6 pb-16 md:px-12 lg:px-24">
-        <Button className="gap-2">
-          <Upload className="h-4 w-4" />
+        <Button className="gap-2 " disabled>
+          <Upload className="h-4 w-4 " />
           Upload New Cheatsheet
         </Button>
       </section>
@@ -496,7 +496,7 @@ export default async function ClassPage({ params }: { params: Promise<{ id: stri
       <footer className="border-t border-border">
         <div className="container mx-auto px-6 py-12 md:px-12 lg:px-24">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Cheatsheets. All materials for educational purposes.
+            © {new Date().getFullYear()} Michaels Sheets. All materials for educational purposes.
           </p>
         </div>
       </footer>
